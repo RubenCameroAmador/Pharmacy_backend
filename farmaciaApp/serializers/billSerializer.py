@@ -19,7 +19,7 @@ class BillSerializer( serializers.ModelSerializer):
             'state_orden': bill.state_orden,
             'ordenDetail': {
                 'id': ordenDetail.id,
-                'product': ordenDetail.product,     #esto no lo tengo claro. El product es otra FK
+                'product': ordenDetail.product,     #esto no lo tengo claro. El product es otra FK PUEDE FALLAR
                 'price': ordenDetail.price,
                 'amount': ordenDetail.amount,
             }
