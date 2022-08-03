@@ -23,5 +23,6 @@ urlpatterns = [
     path('userCreate/',views.UserCreateView.as_view()),
     path('productCreate/',views.ProductCreateView.as_view()),
     path('productGet/',views.ProductGetView.as_view()),
+    #path('billCreate/',views.BillCreateView.as_view()),
     path('refresh/',TokenRefreshView.as_view())  
 ]

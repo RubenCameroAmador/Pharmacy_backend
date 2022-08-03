@@ -12,8 +12,10 @@ class BillSerializer( serializers.ModelSerializer):
     def to_representation(self, obj):
         bill = Bill.objects.get(id= obj.id)
         ordenDetail = OrdenDetail.objects.get(bill = obj.id) 
+
         return {
             'id':bill.id,
+            'user':bill.user,
             'transaction_date': bill.transaction_date,
             'total_price':bill.total_price,
             'state_orden': bill.state_orden,
