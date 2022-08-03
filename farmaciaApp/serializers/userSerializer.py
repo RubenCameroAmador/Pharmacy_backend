@@ -20,7 +20,6 @@ class UserSerializer(serializers.ModelSerializer):
             'email':user.email,
             'address': user.address,
             'city': user.city,
-            'email': user.email,
             'phone_number': user.phone_number,
             'bill': {
                 'id':bill.id,

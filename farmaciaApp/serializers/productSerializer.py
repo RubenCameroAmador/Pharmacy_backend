@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Product,
+        model= Product
         fields= ['name','description','unit_price','expiration_date','amount','cooled','image_link','category']  #quito orden detail
 
     def to_representation(self, obj):

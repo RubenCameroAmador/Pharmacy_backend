@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from farmaciaApp import views
+from rest_framework_simplejwt.views import (TokenObtainPairView,TokenRefreshView)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('login/',TokenObtainPairView.as_view()),
+    path('userCreate/',views.UserCreateView.as_view()),
+    path('productCreate/',views.ProductCreateView.as_view()),
+    path('productGet/',views.ProductGetView.as_view()),
+    path('refresh/',TokenRefreshView.as_view())  
 ]
